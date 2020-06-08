@@ -33,7 +33,6 @@ async function loadInfoPage(page) {
 async function awaitPageLoader(page) {
   await page.waitForSelector("#dashboard");
   await screenShot(page, '3dashboard');
-
 }
 
 async function submitLogin(page) {
@@ -47,7 +46,6 @@ async function pressKeyboardTab(page) {
 async function whitePasswordInput(page) {
   await page.keyboard.type(env.senha);
   await screenShot(page, '2password');
-
 }
 
 function screenShot(page, img) {
@@ -59,5 +57,4 @@ async function whiteLoginInput(page) {
   await page.waitForSelector("[name='login']");
   await page.type("[name='login']", env.email);
   await screenShot(page, '1login');
-
 }
